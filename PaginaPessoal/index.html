@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Página Web com HTML puro</title>
+    <title> Página Web com HTML, CSS e JS</title>
     <meta lang="pt-br">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      .polaroid {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            margin: auto;
+            padding: 20px;
+        }
+      .flex-container {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
   </head>
-
   <body>
     <div>
-      <h1>Pag com tudo</h1>
-    </div> 
+      <h1 style="display: flex;justify-content: center;">Seja Bem vindo</h1>
+      <div class="flex-container">
+        <div class="polaroid">
+          <h3>Digite um hobbie:</h3><br>
+          <input type="text" id="btnHob"><input type="submit" onclick="criaHobbie()" value="Inserir item"><br><br>
+          <div id="hobbies">
+
+          </div>
+        </div>
+        <div class="polaroid">
+          <h3>Digite uma duvida sobre JS:</h3><br>
+          <input type="text" id="btnDuv"><input type="submit" onclick="criaDuvida()" value="Inserir item"><br><br>
+          <div id="duvidas">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+          <p>
+              Nome do proprietário do site: Richard Santos Barbosa <br>
+              Professor: Mateus Grellert<br>
+              Disciplina: Programação para Web (INE5646)<br>
+          </p>
+      </div>
+  </footer> 
   </body>
-  
 </html>

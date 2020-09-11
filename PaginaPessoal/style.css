@@ -1,0 +1,17 @@
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+ }
+ body{
+     position: relative;
+     background:radial-gradient(black, grey) fixed;
+     color:white;
+     font-family: 'roboto';
+     font-size: 20px;
+     height:700px;
+ }
