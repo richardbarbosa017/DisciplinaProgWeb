@@ -1,0 +1,124 @@
+.polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+header{
+    height: 400px;
+}
+.nome{
+    text-align:center;
+    position: relative;
+    top:-80px;
+}
+.banner{
+    background-image: url("https://cdn.pixabay.com/photo/2019/12/14/08/51/artificial-intelligence-4694498_1280.jpg");
+    background-color: #cccccc;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 20px;
+  }
+.perfil{
+    position: relative;
+    top:-60px;
+    left: calc(50% - 45px);
+    border: 4px solid white; 
+    background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../PaginaPessoalHtml/assets/eu.png");
+    border-radius: 50%;
+    width: 90px;
+    height: 120px;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-size:24pt;
+    font-weight: 700;
+}
+h2{
+    font-size: 16pt;
+    font-weight: 500;
+    color:grey;
+}
+h4{
+    font-size: 14pt;
+    font-weight: 400;
+}
+body{
+    margin: 0;
+    font-family: serif;
+    font-family: 'Roboto Slab', serif;
+    color: darkslategray;
+}
+#posts{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.post{
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: darkslategray;
+    margin: 15px;
+    width: calc(66.76% - 40px);
+    
+}
+.post-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 400px) {
+    .flex-container{
+        flex-direction: column;
+    }
+    .perfil{
+        left:40px;
+        top:-130px;
+        width: 67.5px;
+        height: 90px;
+    }
+    .nome{
+        top:-140px;
+        right: 120px;
+        font-size: 12pt;
+    }
+    .banner{
+        height: 100px;
+    }
+    header{
+        height: 200px;
+    }
+        
+    h1{
+        font-size: 20pt;
+    }
+    h2{
+        font-size: 12pt;
+    }
+    h4{
+        font-size: 10pt;
+    }    
+}
