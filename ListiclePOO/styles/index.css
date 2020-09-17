@@ -31,7 +31,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../PaginaPessoalHtml/assets/eu.png");
+    background-image: url("../../PaginaPessoalHtml/assets/eu.png");
     border-radius: 50%;
     width: 90px;
     height: 120px;
@@ -90,31 +90,26 @@ body{
     position: relative;
     border-radius: 10px;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 400px) {
     .flex-container{
         flex-direction: column;
-    }
-    .post{
-        width: 80%;
     }
     .perfil{
         left:40px;
         top:-130px;
         width: 67.5px;
-        text-align: left;
         height: 90px;
     }
     .nome{
         top:-140px;
-        margin: 10px;
-        text-align: left;
+        right: 120px;
         font-size: 12pt;
     }
     .banner{
         height: 100px;
     }
     header{
-        height: 140px;
+        height: 200px;
     }
         
     h1{

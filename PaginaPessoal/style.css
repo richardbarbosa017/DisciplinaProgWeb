@@ -1,6 +1,8 @@
+html{
+    margin: 0;
+}
 footer{
     position: absolute;
-    left: 0;
     bottom: 0;
     width: 100%;
     background-color: black;
@@ -8,10 +10,26 @@ footer{
     text-align: center;
  }
  body{
-     position: relative;
      background:radial-gradient(black, grey) fixed;
      color:white;
      font-family: 'roboto';
      font-size: 20px;
-     height:700px;
+     margin: 0;
+ }
+ .polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+ @media only screen and (max-width: 400px) {
+     .polaroid{
+         width: 40%;
+     }
+     .flex-container{
+         width: 100%;
+     }
+     input{
+         width: 60%;
+     }
  }

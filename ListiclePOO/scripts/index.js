@@ -1,3 +1,5 @@
+import {Post} from './post.js';
+
 const data = [
     {
         "title":"Inteligência Artificial",
@@ -18,32 +20,5 @@ const data = [
         "img":"https://static.thenounproject.com/png/1456771-200.png"
     }
 ]
-
-var posts = document.getElementById('posts');
-
-for(datas in data){
-    var div = document.createElement('div');
-    div.className = 'post';
-
-    var h1 = document.createElement('h1');
-    h1.textContent=data[datas]['title'];
-    div.appendChild(h1);
-
-    var h2 = document.createElement('h2');
-    h2.textContent=data[datas]['subtitle'];
-    div.appendChild(h2);
-
-    var body = document.createElement('h4');
-    body.textContent=data[datas]['body'];
-    div.appendChild(body);
-
-    var img = document.createElement('img');
-    img.src = data[datas]['img'];
-    img.alt = data[datas]['title'] + ' imagem';
-    img.className = 'post-img';
-    div.appendChild(img);
-
-    console.log(div);
-    posts.appendChild(div);
-}
-
+const container = document.getElementById('posts');
+const posts = new Post(container, data);
