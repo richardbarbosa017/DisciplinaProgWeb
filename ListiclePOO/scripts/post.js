@@ -8,7 +8,7 @@ class Post{
         this.createPost = this.createPost.bind(this);
     }
     createPost(){
-        for(datas in this.post){
+        
             let div = document.createElement('div');
             div.className = 'post';
         
@@ -31,6 +31,6 @@ class Post{
             div.appendChild(img);
 
             this.containerElement.appendChild(div);
-        }
+        
     }
 }
