@@ -1,68 +1,73 @@
 class Post{
     constructor(containerElement, post){
         this.containerElement = containerElement;
-        this.title = post.title;
-        this.subtitle = post.subtitle;
-        this.body = post.body;
-        this.img = post.img;
-        this.createPost = this.createPost.bind(this);
         this.clicked = this.clicked.bind(this);
-    }
-    createPost(){
+    
         
-            let div = document.createElement('div');
-            div.className = 'post';
+        this.div = document.createElement('div');
+        this.div.className = 'post';
+    
+        this.h1 = document.createElement('h1');
+        this.h1.textContent=post.title;
+        this.div.appendChild(this.h1);
+    
+        this.h2 = document.createElement('h2');
+        this.h2.textContent=post.subtitle;
+        this.div.appendChild(this.h2);
+    
+        this.body = document.createElement('h4');
+        this.body.textContent=post.body;
+        this.div.appendChild(this.body);
+    
+        this.img = document.createElement('img');
+        this.img.src = post.img;
+        this.img.alt = post.img + ' imagem';
+        this.img.className = 'post-img';
+        this.div.appendChild(this.img);
+
+        this.div2 = document.createElement('div');
+        this.div2.className = 'feedback';
+
+        this.contador = document.createElement('p');
+        this.contador.textContent='0';
+        this.contador.id = 'contador';
+        this.button = new button(this.div2,this.clicked);
+        this.div2.appendChild(this.contador);
         
-            let h1 = document.createElement('h1');
-            h1.textContent=this.title;
-            div.appendChild(h1);
+        this.div.appendChild(this.div2);
+
+        this.containerElement.appendChild(this.div);
         
-            let h2 = document.createElement('h2');
-            h2.textContent=this.subtitle;
-            div.appendChild(h2);
-        
-            let body = document.createElement('h4');
-            body.textContent=this.body;
-            div.appendChild(body);
-        
-            let img = document.createElement('img');
-            img.src = this.img;
-            img.alt = this.img + ' imagem';
-            img.className = 'post-img';
-            div.appendChild(img);
+}
 
-            let div2 = document.createElement('div');
-            div2.className = 'feedback';
-
-            let like = document.createElement('input');
-            like.type = 'button';
-            like.id = 'like';
-            div2.appendChild(like);
-
-            let contador = document.createElement('p');
-            contador.textContent='0';
-            contador.id = 'contador';
-            div2.appendChild(contador);
-
-            div.appendChild(div2);
-
-            this.containerElement.appendChild(div);
+    clicked() {
+        if(this.button.like.id === 'click'){
+            this.button.like.id = 'like';
             
-            like.addEventListener('click',this.clicked);
-            console.log(like.parentNode);
-        
-    }
-    clicked(event) {
-        const button = event.target;
-        
-        const cont = document.getElementById('contador');
-        if(button.id === 'click'){
-            button.id = 'like';
-            cont.textContent = '0';
+            this.contador.textContent = '0';
         }else{
-            button.id = 'click';
-            cont.textContent = '1';
+            this.button.like.id = 'click';
+            this.contador.textContent = '1';
         }
         
+    }
+}
+
+class button{
+    constructor(containerElement, onClickedCallback){
+        this.containerElement = containerElement;
+        this.onClickedCallback = onClickedCallback;
+        this.onClick = this.onClick.bind(this);
+
+        this.like = document.createElement('input');
+        this.like.type = 'button';
+        this.like.id = 'like';
+        this.like.addEventListener('click',this.onClick);
+        this.containerElement.append(this.like);
+
+    }
+
+    onClick(event){
+        this.onClickedCallback()
     }
 }
