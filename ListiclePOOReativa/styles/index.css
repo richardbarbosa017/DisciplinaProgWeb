@@ -58,6 +58,17 @@ header{
     background-color: grey;
     background-image: url("https://i.pinimg.com/564x/ca/08/7e/ca087e0aafeb1a7f37aa259a5ef67d2d.jpg");
 }
+#clickd{
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    border:none;
+    background-color: grey;
+    background-image: url("https://www.vhv.rs/dpng/d/355-3559657_transparent-achievements-clipart-broken-heart-icon-transparent-hd.png");
+}
 #like{
     height: 30px;
     width: 30px;
@@ -68,6 +79,18 @@ header{
     border:none;
     background-color: grey;
     background-image: url("https://i.pinimg.com/564x/ca/08/7e/ca087e0aafeb1a7f37aa259a5ef67d2d.jpg");
+    opacity: 0.5;
+}
+#dislike{
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    border:none;
+    background-color: grey;
+    background-image: url("https://www.vhv.rs/dpng/d/355-3559657_transparent-achievements-clipart-broken-heart-icon-transparent-hd.png");
     opacity: 0.5;
 }
 .flex-container {

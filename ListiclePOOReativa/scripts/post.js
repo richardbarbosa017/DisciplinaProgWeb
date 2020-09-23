@@ -2,6 +2,7 @@ class Post{
     constructor(containerElement, post){
         this.containerElement = containerElement;
         this.clicked = this.clicked.bind(this);
+        this.clicked2 = this.clicked2.bind(this);
     
         
         this.div = document.createElement('div');
@@ -32,7 +33,16 @@ class Post{
         this.contador.textContent='0';
         this.contador.id = 'contador';
         this.button = new button(this.div2,this.clicked);
+        this.button.like.id = 'like';
         this.div2.appendChild(this.contador);
+
+
+        this.contadorD = document.createElement('p');
+        this.contadorD.textContent='0';
+        this.contadorD.id = 'contador';
+        this.buttonD = new button(this.div2,this.clicked2);
+        this.buttonD.like.id = 'dislike';
+        this.div2.appendChild(this.contadorD);
         
         this.div.appendChild(this.div2);
 
@@ -45,11 +55,20 @@ class Post{
             this.button.like.id = 'like';
             
             this.contador.textContent = '0';
-        }else{
+        }else if(this.button.like.id === 'like' && this.buttonD.like.id === 'dislike'){
             this.button.like.id = 'click';
-            this.contador.textContent = '1';
-        }
+            this.contador.textContent = '1';}
         
+    }
+    clicked2() {
+        if(this.buttonD.like.id === 'clickd'){
+            this.buttonD.like.id = 'dislike';
+            
+            this.contadorD.textContent = '0';
+        }else if(this.buttonD.like.id === 'dislike' && this.button.like.id === 'like'){
+            this.buttonD.like.id = 'clickd';
+            this.contadorD.textContent = '1';
+        }        
     }
 }
 
@@ -61,7 +80,6 @@ class button{
 
         this.like = document.createElement('input');
         this.like.type = 'button';
-        this.like.id = 'like';
         this.like.addEventListener('click',this.onClick);
         this.containerElement.append(this.like);
 
